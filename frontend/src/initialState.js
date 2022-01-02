@@ -1,3 +1,5 @@
+const cartItemsFromStorage = localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')) : []
+
 const initialState = {
     productDetails: {
         loading: true,
@@ -17,6 +19,9 @@ const initialState = {
     },
     productList: {
         products: []
+    },
+    cart: {
+        cartItems: cartItemsFromStorage
     }
 }
 
